@@ -1,0 +1,6 @@
+framework module Pods_RickAndMortyTechnicalTest {
+  umbrella header "Pods-RickAndMortyTechnicalTest-umbrella.h"
+
+  export *
+  module * { export * }
+}

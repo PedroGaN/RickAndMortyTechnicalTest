@@ -9,16 +9,16 @@ def project_pods
   pod 'SwiftLint'
 end
 
-target 'BasicTemplate' do
+target 'RickAndMortyTechnicalTest' do
 
   project_pods
 
-  target 'BasicTemplateTests' do
+  target 'RickAndMortyTechnicalTestTests' do
     inherit! :search_paths
     # Pods for testing
   end
 
-  target 'BasicTemplateUITests' do
+  target 'RickAndMortyTechnicalTestUITests' do
     # Pods for testing
   end
 

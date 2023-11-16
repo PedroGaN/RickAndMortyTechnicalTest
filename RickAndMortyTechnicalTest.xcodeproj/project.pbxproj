@@ -26,6 +26,9 @@
 		77670EB12B04AD7F009C7DCE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77670EB02B04AD7F009C7DCE /* Extensions.swift */; };
 		77670EB62B04ADD1009C7DCE /* GenericDataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77670EB52B04ADD1009C7DCE /* GenericDataError.swift */; };
 		77670EB82B04AE09009C7DCE /* AlamofireHttpRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77670EB72B04AE09009C7DCE /* AlamofireHttpRepository.swift */; };
+		7798C4212B05EF1900E77B10 /* CharactersDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798C4202B05EF1900E77B10 /* CharactersDomainModel.swift */; };
+		7798C4232B05EF4F00E77B10 /* FetchCharactersInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798C4222B05EF4F00E77B10 /* FetchCharactersInteractor.swift */; };
+		7798C4262B05F04600E77B10 /* CharactersDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798C4252B05F04600E77B10 /* CharactersDataModel.swift */; };
 		77AE75BC2AFA943300E22485 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77AE75B42AFA943300E22485 /* Domain.framework */; };
 		77AE75C32AFA943300E22485 /* DomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AE75C22AFA943300E22485 /* DomainTests.swift */; };
 		77AE75C42AFA943300E22485 /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 77AE75B62AFA943300E22485 /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -181,6 +184,9 @@
 		77670EB02B04AD7F009C7DCE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		77670EB52B04ADD1009C7DCE /* GenericDataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericDataError.swift; sourceTree = "<group>"; };
 		77670EB72B04AE09009C7DCE /* AlamofireHttpRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireHttpRepository.swift; sourceTree = "<group>"; };
+		7798C4202B05EF1900E77B10 /* CharactersDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersDomainModel.swift; sourceTree = "<group>"; };
+		7798C4222B05EF4F00E77B10 /* FetchCharactersInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCharactersInteractor.swift; sourceTree = "<group>"; };
+		7798C4252B05F04600E77B10 /* CharactersDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersDataModel.swift; sourceTree = "<group>"; };
 		77AE75B42AFA943300E22485 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77AE75B62AFA943300E22485 /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		77AE75BB2AFA943300E22485 /* DomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -393,8 +399,7 @@
 			isa = PBXGroup;
 			children = (
 				77670EA12B04AB3D009C7DCE /* Error */,
-				77670EA02B04AB35009C7DCE /* Request */,
-				77670E9F2B04AB2D009C7DCE /* Response */,
+				7798C41F2B05EEF800E77B10 /* Response */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -413,20 +418,6 @@
 				77670E9D2B04AB0E009C7DCE /* BaseDisposeBag.swift */,
 			);
 			path = DisposeBag;
-			sourceTree = "<group>";
-		};
-		77670E9F2B04AB2D009C7DCE /* Response */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Response;
-			sourceTree = "<group>";
-		};
-		77670EA02B04AB35009C7DCE /* Request */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Request;
 			sourceTree = "<group>";
 		};
 		77670EA12B04AB3D009C7DCE /* Error */ = {
@@ -459,7 +450,7 @@
 			isa = PBXGroup;
 			children = (
 				77670EB32B04ADBC009C7DCE /* Error */,
-				77670EB42B04ADC2009C7DCE /* Response */,
+				7798C4242B05F03200E77B10 /* Response */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -480,9 +471,18 @@
 			path = Error;
 			sourceTree = "<group>";
 		};
-		77670EB42B04ADC2009C7DCE /* Response */ = {
+		7798C41F2B05EEF800E77B10 /* Response */ = {
 			isa = PBXGroup;
 			children = (
+				7798C4202B05EF1900E77B10 /* CharactersDomainModel.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		7798C4242B05F03200E77B10 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				7798C4252B05F04600E77B10 /* CharactersDataModel.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -568,6 +568,7 @@
 			isa = PBXGroup;
 			children = (
 				77670EA62B04AB86009C7DCE /* Base */,
+				7798C4222B05EF4F00E77B10 /* FetchCharactersInteractor.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -1243,6 +1244,8 @@
 				77670EA82B04AB97009C7DCE /* BaseInteractor.swift in Sources */,
 				77670EA52B04AB76009C7DCE /* HttpRepository.swift in Sources */,
 				77670E9E2B04AB0E009C7DCE /* BaseDisposeBag.swift in Sources */,
+				7798C4212B05EF1900E77B10 /* CharactersDomainModel.swift in Sources */,
+				7798C4232B05EF4F00E77B10 /* FetchCharactersInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1261,6 +1264,7 @@
 				77670EAF2B04AD5C009C7DCE /* NetworkConstants.swift in Sources */,
 				77670EB82B04AE09009C7DCE /* AlamofireHttpRepository.swift in Sources */,
 				77670EB12B04AD7F009C7DCE /* Extensions.swift in Sources */,
+				7798C4262B05F04600E77B10 /* CharactersDataModel.swift in Sources */,
 				77670EB62B04ADD1009C7DCE /* GenericDataError.swift in Sources */,
 				77670EAD2B04AD38009C7DCE /* AlamofireHttpRepositoryConstants.swift in Sources */,
 			);

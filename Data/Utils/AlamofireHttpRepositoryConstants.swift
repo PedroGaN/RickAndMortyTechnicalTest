@@ -9,6 +9,12 @@ import Foundation
 
 public struct AlamofireHttpRepositoryConstants {
 
-    public static let baseURL = "some url"
+    public static let baseURL = "https://rickandmortyapi.com/api/"
+
+    struct Path {
+        static let characters = "character"
+        static let locations = "location"
+        static let episodes = "episode"
+    }
 
 }

@@ -83,6 +83,45 @@ public class AlamofireHttpRepository: HttpRepository {
             }
     }
 
+    public func filterCharacters(filters: FilterCharactersRequestDomainModel,
+                          onSuccess: @escaping (_ success: CharactersDomainModel) -> Void,
+                          onFailure: @escaping (_ error: Error) -> Void) {
+
+        let url: String = filters.pageURL ?? (baseUrl + AlamofireHttpRepositoryConstants.Path.characters)
+
+        var parameters: FilterCharactersRequestDataModel?
+        if filters.pageURL?.isEmpty ?? true {
+            parameters = FilterCharactersRequestDataModel(filters)
+        }
+
+        alamofireSession.request(url,
+                                 method: .get,
+                                 parameters: parameters,
+                                 headers: getJsonHeader())
+            .validate(statusCode: NetworkConstants.HTTPRanges.success)
+            .responseData { response in
+                switch response.result {
+                case .success:
+                    do {
+                        if let data = response.data {
+                            print("\nGET: \(url) \n\n" + "RESPONSE:\n\n\(String(describing: data.prettyPrintedJSONString!))\n\n")
+                            let charactersDomainModel = try CharactersDataModel(data: data).parseToDomainModel()
+                            onSuccess(charactersDomainModel)
+                        } else {
+                            print("\n ERROR: \(url) \n" + "EMPTY DATA")
+                            onFailure(GenericDataError(type: .noContent, description: GenericErrorDescription.emptyData.rawValue))
+                        }
+                    } catch {
+                        print("\n ERROR: \(url) \n" + "PARSE FAILED")
+                        onFailure(GenericDataError(type: .parseFailed, description: GenericErrorDescription.parseFailed.rawValue))
+                    }
+                case let .failure(error):
+                    print("\n ERROR: \(url) \n")
+                    onFailure(AlamofireHttpRepository.onFailureService(response: response, error: error))
+                }
+            }
+    }
+
     // MARK: - Private functions
 
     internal func getJsonHeader() -> HTTPHeaders {

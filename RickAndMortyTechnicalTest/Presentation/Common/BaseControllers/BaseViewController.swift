@@ -11,6 +11,7 @@ import UIKit
 public protocol BaseViewProtocol: AnyObject {
     func showLoading()
     func hideLoading()
+    func showBasicDialog(text: String?, message: String?)
 }
 
 private protocol BaseViewDependencies: AnyObject {
@@ -41,6 +42,7 @@ class BaseViewController<Presenter>: UIViewController,
 
     override open func viewDidLoad() {
         super.viewDidLoad()
+        hideKeyboardWhenTappedAround()
         presenter.didLoad()
     }
 
@@ -57,6 +59,7 @@ class BaseViewController<Presenter>: UIViewController,
     override open func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         presenter.didAppear()
+        navigationController?.navigationBar.isHidden = true
     }
 
     override open func viewWillDisappear(_ animated: Bool) {
@@ -66,6 +69,7 @@ class BaseViewController<Presenter>: UIViewController,
 
     override open func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
+        removeKeyboardObservers()
         presenter.didDisappear()
     }
 
@@ -75,15 +79,33 @@ class BaseViewController<Presenter>: UIViewController,
 
     // MARK: - BaseViewProtocol
 
-    internal func showLoading() {
+    func showLoading() {
         showNativeLoading(parentView: view)
         view.isUserInteractionEnabled = false
     }
 
-    internal func hideLoading() {
+    func hideLoading() {
         loadingView?.removeFromSuperview()
         loadingView = nil
         view.isUserInteractionEnabled = true
+    }
+
+    func showBasicDialog(text: String? = nil, message: String? = nil) {
+        let alert = UIAlertController(
+            title: text,
+            message: message,
+            preferredStyle: .alert
+        )
+
+        let alertAction = UIAlertAction(
+            title: "accept".localized,
+            style: .cancel
+        ) { _ in
+            alert.dismiss(animated: true)
+        }
+        alert.addAction(alertAction)
+        alert.preferredAction = alertAction
+        present(alert, animated: true, completion: nil)
     }
 
     // MARK: - Methods
@@ -116,15 +138,51 @@ class BaseViewController<Presenter>: UIViewController,
         }
     }
 
-    // MARK: - UIGestureRecognizerDelegate functions
+    // MARK: - Private Methods
 
-    /// Event associated with 'pop' gesture.
+    private func getMainScrollView() -> UIScrollView? {
+        var scrollView: UIScrollView?
+        for view in view.subviews {
+            if let scroll = view as? UIScrollView {
+                scrollView = scroll
+                break
+            }
+        }
+        return scrollView
+    }
+
+    // MARK: - UIGestureRecognizerDelegate
+
     @objc open func handlePopGesture(gesture: UIGestureRecognizer) {
         if gesture.state == .began {
             presenter.handlePopBeganGesture()
         } else if gesture.state == .ended {
             presenter.handlePopEndedGesture()
         }
+    }
+
+    // MARK: - Keyboard Control
+
+    public func addKeyboardObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWasShown),
+                                               name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillBeHidden),
+                                               name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+
+    public func removeKeyboardObservers() {
+        NotificationCenter.default.removeObserver(self,
+                                                  name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        NotificationCenter.default.removeObserver(self,
+                                                  name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+
+    @objc open func keyboardWasShown(_ notification: NSNotification) {
+        getMainScrollView()?.setScrollSizeOnKeyboard(notification: notification)
+    }
+
+    @objc open func keyboardWillBeHidden(_ notification: NSNotification) {
+        getMainScrollView()?.resetScrollSizeOnKeyboard()
     }
 
 }

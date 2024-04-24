@@ -11,8 +11,8 @@ import Foundation
 
 public struct CharactersDomainModel {
 
-    let info: CharactersInfoDomainModel
-    let results: [CharactersResultsDomainModel]
+    public let info: CharactersInfoDomainModel
+    public let results: [CharactersResultsDomainModel]
 
     public init(
         info: CharactersInfoDomainModel,
@@ -28,10 +28,10 @@ public struct CharactersDomainModel {
 
 public struct CharactersInfoDomainModel {
 
-    let count: Int
-    let pages: Int
-    let next: String?
-    let prev: String?
+    public let count: Int
+    public let pages: Int
+    public let next: String?
+    public let prev: String?
 
     public init(
         count: Int,
@@ -51,18 +51,18 @@ public struct CharactersInfoDomainModel {
 
 public struct CharactersResultsDomainModel {
 
-    let id: Int
-    let name: String
-    let status: String
-    let species: String
-    let type: String
-    let gender: String
-    let origin: BaseInfoDomainModel
-    let location: BaseInfoDomainModel
-    let image: String
-    let episode: [String]
-    let url: String
-    let created: String
+    public let id: Int
+    public let name: String
+    public let status: String
+    public let species: String
+    public let type: String
+    public let gender: String
+    public let origin: BaseInfoDomainModel
+    public let location: BaseInfoDomainModel
+    public let image: String
+    public let episode: [String]
+    public let url: String
+    public let created: String
 
     public init(
         id: Int,
@@ -98,8 +98,8 @@ public struct CharactersResultsDomainModel {
 
 public struct BaseInfoDomainModel {
 
-    let name: String
-    let url: String
+    public let name: String
+    public let url: String
 
     public init(
         name: String,

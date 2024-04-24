@@ -20,9 +20,13 @@ final class DependencyInjector {
 
     // MARK: - Interactors
 
-    /*func getSomeInteractor() -> SomeInteractor {
-        return SomeInteractor(alamofireHttpRepository: getAlamofireHttpRepository())
-    }*/
+    func getFetchCharactersInteractor() -> FetchCharactersInteractor {
+        return FetchCharactersInteractor(alamofireHttpRepository: getAlamofireHttpRepository())
+    }
+
+    func getFilterCharactersInteractor() -> FilterCharactersInteractor {
+        return FilterCharactersInteractor(alamofireHttpRepository: getAlamofireHttpRepository())
+    }
 
     // MARK: - Presenters
 
@@ -31,7 +35,9 @@ final class DependencyInjector {
     }
 
     func getMainScreenPresenter(view: MainScreenViewControllerProtocol, router: MainWireframeProtocol) -> MainScreenPresenterProtocol {
-        return MainScreenPresenter(view: view, router: router)
+        return MainScreenPresenter(view: view, router: router,
+                                   fetchCharactersInteractor: getFetchCharactersInteractor(),
+                                   filterCharactersInteractor: getFilterCharactersInteractor())
     }
 
 }

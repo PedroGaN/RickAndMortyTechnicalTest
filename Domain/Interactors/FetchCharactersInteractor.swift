@@ -15,7 +15,7 @@ public class FetchCharactersInteractor: BaseInteractor<String?, CharactersDomain
 
     // MARK: - Initializer
 
-    init(alamofireHttpRepository: HttpRepository) {
+    public init(alamofireHttpRepository: HttpRepository) {
         self.alamofireHttpRepository = alamofireHttpRepository
         super.init()
     }

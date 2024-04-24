@@ -18,5 +18,11 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>hey_comic.ttf</string>
+	</array>
+	<key>UILaunchStoryboardName</key>
+	<string>SplashViewController.storyboard</string>
 </dict>
 </plist>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="hey_comic.ttf">
+            <string>Hey-Comic</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OptionsTextField" customModule="RickAndMortyTechnicalTest" customModuleProvider="target">
+            <connections>
+                <outlet property="optionsTable" destination="T9P-vJ-Ipq" id="nEO-uv-xPP"/>
+                <outlet property="textField" destination="Vbz-80-WAj" id="gMm-s4-bC9"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="437" height="121"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="XCv-MB-VvO">
+                    <rect key="frame" x="0.0" y="59" width="437" height="28"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RUJ-7M-Xby">
+                            <rect key="frame" x="0.0" y="0.0" width="437" height="28"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Placeholder" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vbz-80-WAj">
+                                    <rect key="frame" x="0.0" y="0.0" width="437" height="28"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="28" id="GVs-T9-u7i"/>
+                                    </constraints>
+                                    <color key="textColor" name="Nero"/>
+                                    <fontDescription key="fontDescription" name="Hey-Comic" family="Hey Comic" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet"/>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lyK-vK-ayE">
+                                    <rect key="frame" x="0.0" y="0.0" width="437" height="28"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <connections>
+                                        <action selector="toggleOptionsMenuAction:" destination="-1" eventType="touchUpInside" id="rd0-Cq-tS4"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="Vbz-80-WAj" firstAttribute="leading" secondItem="RUJ-7M-Xby" secondAttribute="leading" id="2Tu-TG-lKS"/>
+                                <constraint firstItem="lyK-vK-ayE" firstAttribute="trailing" secondItem="Vbz-80-WAj" secondAttribute="trailing" id="5Jj-Hq-CVO"/>
+                                <constraint firstItem="lyK-vK-ayE" firstAttribute="leading" secondItem="Vbz-80-WAj" secondAttribute="leading" id="5jc-YL-Pa3"/>
+                                <constraint firstItem="Vbz-80-WAj" firstAttribute="top" secondItem="RUJ-7M-Xby" secondAttribute="top" id="Bvm-yj-DHE"/>
+                                <constraint firstItem="lyK-vK-ayE" firstAttribute="top" secondItem="Vbz-80-WAj" secondAttribute="top" id="SW6-DS-4ug"/>
+                                <constraint firstAttribute="trailing" secondItem="Vbz-80-WAj" secondAttribute="trailing" id="ayH-gs-fe3"/>
+                                <constraint firstItem="lyK-vK-ayE" firstAttribute="bottom" secondItem="Vbz-80-WAj" secondAttribute="bottom" id="e3c-Aq-FLR"/>
+                                <constraint firstAttribute="bottom" secondItem="Vbz-80-WAj" secondAttribute="bottom" id="p9J-nB-S47"/>
+                            </constraints>
+                            <variation key="default">
+                                <mask key="subviews">
+                                    <exclude reference="lyK-vK-ayE"/>
+                                </mask>
+                            </variation>
+                        </view>
+                        <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="437" placeholderIntrinsicHeight="20" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="T9P-vJ-Ipq" customClass="SelfSizingTableView" customModule="RickAndMortyTechnicalTest" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="28" width="437" height="0.0"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="separatorColor" name="Nero"/>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="XCv-MB-VvO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="48k-Sa-5Hm"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="XCv-MB-VvO" secondAttribute="bottom" id="Aus-gZ-TJT"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="XCv-MB-VvO" secondAttribute="trailing" id="NBa-O6-rKw"/>
+                <constraint firstItem="XCv-MB-VvO" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="ZHo-i0-sme"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="141.22137404580153" y="-151.05633802816902"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Nero">
+            <color red="0.090196078431372548" green="0.086274509803921567" blue="0.086274509803921567" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

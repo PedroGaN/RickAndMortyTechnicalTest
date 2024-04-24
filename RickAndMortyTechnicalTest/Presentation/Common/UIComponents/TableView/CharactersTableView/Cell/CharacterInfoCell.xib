@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="hey_comic.ttf">
+            <string>Hey-Comic</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CharacterInfoCell" rowHeight="192" id="iwZ-Ep-QvI" customClass="CharacterInfoCell" customModule="RickAndMortyTechnicalTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="160"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iwZ-Ep-QvI" id="Wad-Xg-Ux2">
+                <rect key="frame" x="0.0" y="0.0" width="390" height="160"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A9C-Sx-Os7">
+                        <rect key="frame" x="16" y="8" width="358" height="144"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_character_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="AMH-3c-9JG">
+                                <rect key="frame" x="8" y="8" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="DZ4-28-rsS"/>
+                                    <constraint firstAttribute="height" constant="128" id="zrY-2n-CGe"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="3Yv-cq-o2a">
+                                <rect key="frame" x="148" y="21.999999999999993" width="202" height="88.333333333333314"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2lv-ak-uaV">
+                                        <rect key="frame" x="0.0" y="0.0" width="202" height="15.333333333333334"/>
+                                        <fontDescription key="fontDescription" name="Hey-Comic" family="Hey Comic" pointSize="12"/>
+                                        <color key="textColor" name="Nero"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mzW-zz-3r3">
+                                        <rect key="frame" x="0.0" y="24.333333333333332" width="202" height="15.333333333333332"/>
+                                        <fontDescription key="fontDescription" name="Hey-Comic" family="Hey Comic" pointSize="12"/>
+                                        <color key="textColor" name="Nero"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkX-yu-Uoe">
+                                        <rect key="frame" x="0.0" y="48.666666666666671" width="202" height="15.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="Hey-Comic" family="Hey Comic" pointSize="12"/>
+                                        <color key="textColor" name="Nero"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="395-P7-Sk2">
+                                        <rect key="frame" x="0.0" y="73" width="202" height="15.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="Hey-Comic" family="Hey Comic" pointSize="12"/>
+                                        <color key="textColor" name="Nero"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_down" translatesAutoresizingMaskIntoConstraints="NO" id="KAF-ot-5RH">
+                                <rect key="frame" x="326" y="108" width="28" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="BJI-fp-pbI"/>
+                                    <constraint firstAttribute="width" constant="28" id="LYQ-BQ-LuD"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bCQ-hU-vRH">
+                                <rect key="frame" x="8" y="144" width="342" height="0.0"/>
+                                <subviews>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XMY-x9-0vf">
+                                        <rect key="frame" x="0.0" y="0.0" width="342" height="32"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="EGQ-t3-DSO">
+                                                <rect key="frame" x="0.0" y="0.0" width="342" height="24"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="342" placeholderIntrinsicHeight="0.0" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVw-8e-Oc7">
+                                                        <rect key="frame" x="0.0" y="0.0" width="342" height="0.0"/>
+                                                        <fontDescription key="fontDescription" name="Hey-Comic" family="Hey Comic" pointSize="14"/>
+                                                        <color key="textColor" name="Nero"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLz-gz-b78">
+                                                        <rect key="frame" x="0.0" y="8" width="342" height="0.0"/>
+                                                        <fontDescription key="fontDescription" name="Hey-Comic" family="Hey Comic" pointSize="14"/>
+                                                        <color key="textColor" name="Nero"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dxu-PJ-9HR">
+                                                        <rect key="frame" x="0.0" y="16" width="342" height="0.0"/>
+                                                        <fontDescription key="fontDescription" name="Hey-Comic" family="Hey Comic" pointSize="14"/>
+                                                        <color key="textColor" name="Nero"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EBI-3t-IgX">
+                                                        <rect key="frame" x="0.0" y="24" width="342" height="0.0"/>
+                                                        <fontDescription key="fontDescription" name="Hey-Comic" family="Hey Comic" pointSize="14"/>
+                                                        <color key="textColor" name="Nero"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="EGQ-t3-DSO" secondAttribute="trailing" id="6v9-Rh-ehN"/>
+                                            <constraint firstAttribute="bottom" secondItem="EGQ-t3-DSO" secondAttribute="bottom" constant="8" id="HgA-YX-FZg"/>
+                                            <constraint firstItem="EGQ-t3-DSO" firstAttribute="leading" secondItem="XMY-x9-0vf" secondAttribute="leading" id="ame-yv-rfV"/>
+                                            <constraint firstItem="EGQ-t3-DSO" firstAttribute="top" secondItem="XMY-x9-0vf" secondAttribute="top" id="btc-m7-r78"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="Platinum"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="KAF-ot-5RH" secondAttribute="trailing" constant="4" id="34F-3P-wdO"/>
+                            <constraint firstItem="bCQ-hU-vRH" firstAttribute="leading" secondItem="A9C-Sx-Os7" secondAttribute="leading" constant="8" id="HDi-WO-eIR"/>
+                            <constraint firstItem="3Yv-cq-o2a" firstAttribute="top" secondItem="A9C-Sx-Os7" secondAttribute="top" constant="22" id="IYj-pt-zZo"/>
+                            <constraint firstAttribute="bottom" secondItem="bCQ-hU-vRH" secondAttribute="bottom" id="Mix-9U-xEF"/>
+                            <constraint firstItem="bCQ-hU-vRH" firstAttribute="top" secondItem="KAF-ot-5RH" secondAttribute="bottom" constant="8" id="Us5-wg-aHr"/>
+                            <constraint firstAttribute="trailing" secondItem="bCQ-hU-vRH" secondAttribute="trailing" constant="8" id="VB8-NZ-syc"/>
+                            <constraint firstItem="AMH-3c-9JG" firstAttribute="top" secondItem="A9C-Sx-Os7" secondAttribute="top" constant="8" id="XVS-2H-eD7"/>
+                            <constraint firstItem="3Yv-cq-o2a" firstAttribute="leading" secondItem="AMH-3c-9JG" secondAttribute="trailing" constant="12" id="Y86-DN-JFd"/>
+                            <constraint firstItem="bCQ-hU-vRH" firstAttribute="top" secondItem="AMH-3c-9JG" secondAttribute="bottom" constant="8" id="ZKp-jR-I87"/>
+                            <constraint firstItem="bCQ-hU-vRH" firstAttribute="width" secondItem="A9C-Sx-Os7" secondAttribute="width" constant="-16" id="hVa-TY-uVg"/>
+                            <constraint firstAttribute="trailing" secondItem="3Yv-cq-o2a" secondAttribute="trailing" constant="8" id="pHf-Hh-b9J"/>
+                            <constraint firstItem="AMH-3c-9JG" firstAttribute="leading" secondItem="A9C-Sx-Os7" secondAttribute="leading" constant="8" id="qgt-gs-57S"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="A9C-Sx-Os7" secondAttribute="bottom" constant="8" id="Ebl-ft-Kd3"/>
+                    <constraint firstItem="A9C-Sx-Os7" firstAttribute="leading" secondItem="Wad-Xg-Ux2" secondAttribute="leading" constant="16" id="UVB-vV-v1c"/>
+                    <constraint firstAttribute="trailing" secondItem="A9C-Sx-Os7" secondAttribute="trailing" constant="16" id="Y9b-Yk-twy"/>
+                    <constraint firstItem="A9C-Sx-Os7" firstAttribute="top" secondItem="Wad-Xg-Ux2" secondAttribute="top" constant="8" id="s4x-at-ht0"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="cardView" destination="A9C-Sx-Os7" id="l7R-71-VP8"/>
+                <outlet property="characterImageView" destination="AMH-3c-9JG" id="fxy-3A-GkZ"/>
+                <outlet property="currentLocationLabel" destination="EBI-3t-IgX" id="8vf-Vv-7wT"/>
+                <outlet property="genderLabel" destination="mzW-zz-3r3" id="RCB-eQ-Xdp"/>
+                <outlet property="idLabel" destination="VVw-8e-Oc7" id="55U-cN-f7R"/>
+                <outlet property="moreInfoImg" destination="KAF-ot-5RH" id="UHn-6A-S5B"/>
+                <outlet property="moreInfoView" destination="XMY-x9-0vf" id="F3b-T0-kzg"/>
+                <outlet property="nameLabel" destination="2lv-ak-uaV" id="f5L-6k-ZnZ"/>
+                <outlet property="originLabel" destination="Dxu-PJ-9HR" id="AwF-Ij-sDf"/>
+                <outlet property="speciesLabel" destination="dkX-yu-Uoe" id="6LR-SG-1QY"/>
+                <outlet property="statusLabel" destination="395-P7-Sk2" id="Psq-2O-Qcn"/>
+                <outlet property="typeLabel" destination="VLz-gz-b78" id="sXk-rE-zzB"/>
+            </connections>
+            <point key="canvasLocation" x="186.15384615384616" y="28.080568720379144"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_down" width="512" height="512"/>
+        <image name="img_character_placeholder" width="299" height="267"/>
+        <namedColor name="Nero">
+            <color red="0.090196078431372548" green="0.086274509803921567" blue="0.086274509803921567" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Platinum">
+            <color red="0.90980392156862744" green="0.90980392156862744" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

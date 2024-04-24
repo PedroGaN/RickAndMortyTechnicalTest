@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="hey_comic.ttf">
+            <string>Hey-Comic</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TableMenuView" customModule="RickAndMortyTechnicalTest" customModuleProvider="target">
+            <connections>
+                <outlet property="applyButton" destination="YxD-bH-TgJ" id="EdU-kX-ttf"/>
+                <outlet property="resetButton" destination="vBq-7c-ttC" id="uFf-o7-Y25"/>
+                <outlet property="searchButton" destination="Atw-cd-C9J" id="EYI-Bk-OSa"/>
+                <outlet property="searchGenderTextField" destination="xFc-4X-sSX" id="ubt-wU-ke8"/>
+                <outlet property="searchMenuView" destination="WMz-vZ-Tei" id="6Pq-EB-GUK"/>
+                <outlet property="searchNameTextField" destination="DwW-YW-RrT" id="ou9-vn-aW1"/>
+                <outlet property="searchSpeciesTextField" destination="PeD-ad-UUg" id="rs3-GI-BNB"/>
+                <outlet property="searchStatusTextField" destination="F0L-sR-k1k" id="5Vr-gn-LTD"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Env-jb-xfm">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="145"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6sH-c0-HGJ">
+                    <rect key="frame" x="0.0" y="59" width="375" height="52"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="473-xz-VrF">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="52"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Atw-cd-C9J">
+                                    <rect key="frame" x="8" y="16" width="75" height="20"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="HSb-TD-ZP6"/>
+                                    </constraints>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    <connections>
+                                        <action selector="toggleSearchMenuAction:" destination="-1" eventType="touchUpInside" id="M2U-oV-AiK"/>
+                                    </connections>
+                                </button>
+                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vBq-7c-ttC">
+                                    <rect key="frame" x="213" y="16" width="75" height="20"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="Sf9-BU-dPy"/>
+                                    </constraints>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    <connections>
+                                        <action selector="resetAction:" destination="-1" eventType="touchUpInside" id="a1g-nZ-rWI"/>
+                                    </connections>
+                                </button>
+                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YxD-bH-TgJ">
+                                    <rect key="frame" x="294" y="16" width="75" height="20"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="q4d-ZV-Yfa"/>
+                                    </constraints>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    <connections>
+                                        <action selector="applySearchOptionsAction:" destination="-1" eventType="touchUpInside" id="0yu-QY-etU"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="Atw-cd-C9J" firstAttribute="leading" secondItem="473-xz-VrF" secondAttribute="leading" constant="8" id="99K-Sl-cdh"/>
+                                <constraint firstAttribute="bottom" secondItem="YxD-bH-TgJ" secondAttribute="bottom" constant="16" id="Pdp-qq-9UB"/>
+                                <constraint firstItem="Atw-cd-C9J" firstAttribute="top" secondItem="473-xz-VrF" secondAttribute="top" constant="16" id="WXs-ak-7Hk"/>
+                                <constraint firstAttribute="bottom" secondItem="vBq-7c-ttC" secondAttribute="bottom" constant="16" id="kRK-ub-uW6"/>
+                                <constraint firstItem="YxD-bH-TgJ" firstAttribute="leading" secondItem="vBq-7c-ttC" secondAttribute="trailing" constant="6" id="lRZ-qe-enr"/>
+                                <constraint firstAttribute="trailing" secondItem="YxD-bH-TgJ" secondAttribute="trailing" constant="6" id="ppY-SR-rMF"/>
+                                <constraint firstItem="YxD-bH-TgJ" firstAttribute="top" secondItem="473-xz-VrF" secondAttribute="top" constant="16" id="puu-PV-u2A"/>
+                                <constraint firstItem="vBq-7c-ttC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Atw-cd-C9J" secondAttribute="trailing" constant="16" id="qmS-ax-ccJ"/>
+                                <constraint firstItem="vBq-7c-ttC" firstAttribute="top" secondItem="473-xz-VrF" secondAttribute="top" constant="16" id="rxD-1W-bhV"/>
+                                <constraint firstAttribute="bottom" secondItem="Atw-cd-C9J" secondAttribute="bottom" constant="16" id="xkR-qP-lE7"/>
+                            </constraints>
+                        </view>
+                        <view hidden="YES" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WMz-vZ-Tei">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ImW-nd-6Aq">
+                                    <rect key="frame" x="16" y="0.0" width="343" height="80"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DwW-YW-RrT">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="28"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="28" id="GTB-wR-69i"/>
+                                            </constraints>
+                                            <color key="textColor" name="Nero"/>
+                                            <fontDescription key="fontDescription" name="Hey-Comic" family="Hey Comic" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet"/>
+                                        </textField>
+                                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="343" placeholderIntrinsicHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="F0L-sR-k1k" customClass="OptionsTextField" customModule="RickAndMortyTechnicalTest" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="36" width="343" height="0.0"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
+                                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PeD-ad-UUg">
+                                            <rect key="frame" x="0.0" y="44" width="343" height="28"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="28" id="cc3-vk-q1M"/>
+                                            </constraints>
+                                            <color key="textColor" name="Nero"/>
+                                            <fontDescription key="fontDescription" name="Hey-Comic" family="Hey Comic" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet"/>
+                                        </textField>
+                                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="343" placeholderIntrinsicHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xFc-4X-sSX" customClass="OptionsTextField" customModule="RickAndMortyTechnicalTest" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="80" width="343" height="0.0"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="ImW-nd-6Aq" firstAttribute="top" secondItem="WMz-vZ-Tei" secondAttribute="top" id="BW8-d0-qs0"/>
+                                <constraint firstAttribute="trailing" secondItem="ImW-nd-6Aq" secondAttribute="trailing" constant="16" id="OkI-RO-zAC"/>
+                                <constraint firstAttribute="bottom" secondItem="ImW-nd-6Aq" secondAttribute="bottom" constant="16" id="T6p-Jy-HJN"/>
+                                <constraint firstItem="ImW-nd-6Aq" firstAttribute="leading" secondItem="WMz-vZ-Tei" secondAttribute="leading" constant="16" id="YKM-fZ-r7s"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="nYo-Eh-Jva"/>
+            <color key="backgroundColor" name="PowderBlue"/>
+            <constraints>
+                <constraint firstItem="6sH-c0-HGJ" firstAttribute="leading" secondItem="nYo-Eh-Jva" secondAttribute="leading" id="E7Y-np-tjo"/>
+                <constraint firstItem="nYo-Eh-Jva" firstAttribute="bottom" secondItem="6sH-c0-HGJ" secondAttribute="bottom" id="V7H-L9-xYz"/>
+                <constraint firstItem="nYo-Eh-Jva" firstAttribute="trailing" secondItem="6sH-c0-HGJ" secondAttribute="trailing" id="Yh2-iJ-VsR"/>
+                <constraint firstItem="6sH-c0-HGJ" firstAttribute="top" secondItem="nYo-Eh-Jva" secondAttribute="top" id="s6o-pn-5J7"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="55.725190839694655" y="-116.54929577464789"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="YxD-bH-TgJ">
+            <size key="intrinsicContentSize" width="75" height="34.333333333333336"/>
+        </designable>
+        <designable name="vBq-7c-ttC">
+            <size key="intrinsicContentSize" width="75" height="34.333333333333336"/>
+        </designable>
+    </designables>
+    <resources>
+        <namedColor name="Nero">
+            <color red="0.090196078431372548" green="0.086274509803921567" blue="0.086274509803921567" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PowderBlue">
+            <color red="0.72156862745098038" green="0.88235294117647056" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="hey_comic.ttf">
+            <string>Hey-Comic</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="81" id="fMs-EO-KvA" customClass="OptionsCell" customModule="RickAndMortyTechnicalTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="397" height="81"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fMs-EO-KvA" id="Tvo-Bd-ZNh">
+                <rect key="frame" x="0.0" y="0.0" width="397" height="81"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZOa-Dh-jkU">
+                        <rect key="frame" x="16" y="0.0" width="365" height="1"/>
+                        <color key="backgroundColor" name="Platinum"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="qic-je-65T"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&gt;" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l9S-x3-BfZ">
+                        <rect key="frame" x="8" y="4.6666666666666661" width="7.6666666666666679" height="16.666666666666671"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" name="Hey-Comic" family="Hey Comic" pointSize="13"/>
+                        <color key="textColor" name="Nero"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W57-va-Ycj">
+                        <rect key="frame" x="23.666666666666671" y="1" width="30.333333333333329" height="24"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="dvX-Ix-7Vx"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Hey-Comic" family="Hey Comic" pointSize="13"/>
+                        <color key="textColor" name="Nero"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="W57-va-Ycj" firstAttribute="top" secondItem="ZOa-Dh-jkU" secondAttribute="bottom" id="62L-6e-flk"/>
+                    <constraint firstAttribute="bottom" secondItem="W57-va-Ycj" secondAttribute="bottom" id="CGc-Sf-tbi"/>
+                    <constraint firstAttribute="trailing" secondItem="ZOa-Dh-jkU" secondAttribute="trailing" constant="16" id="Ctg-uf-o6h"/>
+                    <constraint firstItem="ZOa-Dh-jkU" firstAttribute="leading" secondItem="Tvo-Bd-ZNh" secondAttribute="leading" constant="16" id="KPy-3k-bcY"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="W57-va-Ycj" secondAttribute="trailing" constant="8" id="LnV-RY-Ay4"/>
+                    <constraint firstItem="W57-va-Ycj" firstAttribute="leading" secondItem="l9S-x3-BfZ" secondAttribute="trailing" constant="8" id="QQw-BE-aa1"/>
+                    <constraint firstItem="ZOa-Dh-jkU" firstAttribute="top" secondItem="Tvo-Bd-ZNh" secondAttribute="top" id="Rs3-3n-Nlv"/>
+                    <constraint firstItem="l9S-x3-BfZ" firstAttribute="centerY" secondItem="W57-va-Ycj" secondAttribute="centerY" id="iDu-eK-Yoe"/>
+                    <constraint firstItem="l9S-x3-BfZ" firstAttribute="leading" secondItem="Tvo-Bd-ZNh" secondAttribute="leading" constant="8" id="s3b-cl-WMo"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="optionLabel" destination="W57-va-Ycj" id="2FF-cg-sor"/>
+                <outlet property="separator" destination="ZOa-Dh-jkU" id="qYs-OI-TOW"/>
+            </connections>
+            <point key="canvasLocation" x="-110.68702290076335" y="44.718309859154935"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="Nero">
+            <color red="0.090196078431372548" green="0.086274509803921567" blue="0.086274509803921567" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Platinum">
+            <color red="0.90980392156862744" green="0.90980392156862744" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

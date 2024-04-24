@@ -21,7 +21,7 @@ extension UIButton {
     }
 
 
-    func setTitle(string: String, size: CGFloat = 12, uppercased: Bool = false, fontColor: UIColor = .black) {
+    func setTitle(string: String, size: CGFloat = 14, uppercased: Bool = false, fontColor: UIColor = .black) {
         let font = Utils.getApplicationFont(withSize: size)
         let attributedTitleNormal = NSMutableAttributedString(string: uppercased ? string.uppercased() : string,
                                                               attributes: [.font: font,

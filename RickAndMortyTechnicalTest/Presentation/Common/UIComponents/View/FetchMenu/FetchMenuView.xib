@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FetchMenuView" customModule="RickAndMortyTechnicalTest" customModuleProvider="target">
+            <connections>
+                <outlet property="fetchMenuOptionsView" destination="cKg-bn-F96" id="baQ-Xr-pZ8"/>
+                <outlet property="fetchMenuToggleView" destination="b9O-gP-Ibm" id="jZF-eU-09h"/>
+                <outlet property="fetchOptionCharactersButton" destination="73i-i8-53b" id="nt7-xF-V8t"/>
+                <outlet property="fetchOptionEpisodesButton" destination="6xO-jH-owH" id="z24-aR-pHt"/>
+                <outlet property="fetchOptionLocationsButton" destination="1xd-jJ-Sqa" id="KgH-An-xbX"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="L5c-uJ-UVf">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2d7-1V-2Ty">
+                    <rect key="frame" x="0.0" y="59" width="375" height="60"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cKg-bn-F96">
+                            <rect key="frame" x="0.0" y="0.0" width="295" height="60"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="c2h-s1-eoT">
+                                    <rect key="frame" x="8" y="10" width="279" height="40"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73i-i8-53b">
+                                            <rect key="frame" x="0.0" y="0.0" width="279" height="40"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                            <connections>
+                                                <action selector="fetchAction:" destination="-1" eventType="touchUpInside" id="a9U-Og-lqp"/>
+                                            </connections>
+                                        </button>
+                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="75" placeholderIntrinsicHeight="40" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6xO-jH-owH">
+                                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="40"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                            <connections>
+                                                <action selector="fetchAction:" destination="-1" eventType="touchUpInside" id="Ipj-Ub-IKS"/>
+                                            </connections>
+                                        </button>
+                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1xd-jJ-Sqa">
+                                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="40"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                            <connections>
+                                                <action selector="fetchAction:" destination="-1" eventType="touchUpInside" id="0Wk-38-Osw"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" name="PowderBlue"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="c2h-s1-eoT" secondAttribute="bottom" constant="10" id="2wR-Fi-09y"/>
+                                <constraint firstItem="c2h-s1-eoT" firstAttribute="top" secondItem="cKg-bn-F96" secondAttribute="top" constant="10" id="7Ua-Sx-f7i"/>
+                                <constraint firstAttribute="trailing" secondItem="c2h-s1-eoT" secondAttribute="trailing" constant="8" id="K2M-vt-Ll4"/>
+                                <constraint firstItem="c2h-s1-eoT" firstAttribute="leading" secondItem="cKg-bn-F96" secondAttribute="leading" constant="8" id="xDY-UI-yEW"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b9O-gP-Ibm">
+                            <rect key="frame" x="295" y="0.0" width="80" height="60"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_portal_gun" translatesAutoresizingMaskIntoConstraints="NO" id="lhR-4i-Sfy">
+                                    <rect key="frame" x="8" y="0.0" width="60" height="60"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="60" id="F2l-7H-gJk"/>
+                                        <constraint firstAttribute="width" constant="60" id="mxc-HX-NN0"/>
+                                    </constraints>
+                                </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9y-fQ-IsN">
+                                    <rect key="frame" x="8" y="0.0" width="60" height="60"/>
+                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain"/>
+                                    <connections>
+                                        <action selector="toggleFetchMenuAction:" destination="-1" eventType="touchUpInside" id="GcC-lz-jnj"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" name="PowderBlue"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="lhR-4i-Sfy" secondAttribute="bottom" id="5UO-Wm-Wj8"/>
+                                <constraint firstItem="lhR-4i-Sfy" firstAttribute="leading" secondItem="b9O-gP-Ibm" secondAttribute="leading" constant="8" id="Kmm-qz-MrZ"/>
+                                <constraint firstItem="K9y-fQ-IsN" firstAttribute="bottom" secondItem="lhR-4i-Sfy" secondAttribute="bottom" id="L54-f1-1dt"/>
+                                <constraint firstItem="K9y-fQ-IsN" firstAttribute="top" secondItem="lhR-4i-Sfy" secondAttribute="top" id="WcS-fJ-Z5A"/>
+                                <constraint firstItem="K9y-fQ-IsN" firstAttribute="trailing" secondItem="lhR-4i-Sfy" secondAttribute="trailing" id="cJP-iU-krd"/>
+                                <constraint firstItem="lhR-4i-Sfy" firstAttribute="top" secondItem="b9O-gP-Ibm" secondAttribute="top" id="lBt-Xi-Bgl"/>
+                                <constraint firstItem="K9y-fQ-IsN" firstAttribute="leading" secondItem="lhR-4i-Sfy" secondAttribute="leading" id="nBB-z2-HgK"/>
+                                <constraint firstAttribute="trailing" secondItem="lhR-4i-Sfy" secondAttribute="trailing" constant="12" id="qur-gq-gYF"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="O9v-Sx-4BY"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="jBu-Uj-8kP"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Pyb-Uj-WEL"/>
+            <constraints>
+                <constraint firstItem="Pyb-Uj-WEL" firstAttribute="bottom" secondItem="2d7-1V-2Ty" secondAttribute="bottom" id="EFd-hj-p0T"/>
+                <constraint firstAttribute="trailing" secondItem="2d7-1V-2Ty" secondAttribute="trailing" id="HY1-b1-MWH"/>
+                <constraint firstItem="2d7-1V-2Ty" firstAttribute="top" secondItem="Pyb-Uj-WEL" secondAttribute="top" id="Jgj-BF-5eM"/>
+                <constraint firstItem="2d7-1V-2Ty" firstAttribute="leading" secondItem="L5c-uJ-UVf" secondAttribute="leading" id="TMU-SI-TUd"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137" y="27"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_portal_gun" width="691" height="608"/>
+        <namedColor name="PowderBlue">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

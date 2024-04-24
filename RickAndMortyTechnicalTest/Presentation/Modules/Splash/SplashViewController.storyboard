@@ -12,13 +12,13 @@
         <!--Splash View Controller-->
         <scene sceneID="Kl3-jr-GeZ">
             <objects>
-                <viewController storyboardIdentifier="SplashViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Pms-Dr-ICF" customClass="SplashViewController" customModule="ViperTemplate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SplashViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Pms-Dr-ICF" customClass="SplashViewController" customModule="RickAndMortyTechnicalTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BSF-aK-AzF">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play.display" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qjl-6F-rZa">
-                                <rect key="frame" x="0.0" y="1" width="393" height="850.66666666666663"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_splash" translatesAutoresizingMaskIntoConstraints="NO" id="qjl-6F-rZa">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cVZ-nI-5DM"/>
@@ -37,7 +37,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="play.display" catalog="system" width="128" height="101"/>
+        <image name="img_splash" width="564" height="1003"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

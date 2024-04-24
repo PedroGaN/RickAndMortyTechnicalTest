@@ -13,7 +13,7 @@ struct ViewContants {
     // MARK: - FONTS
 
     struct fonts {
-        static let someFont = "Some Font"
+        static let heyComic = "Hey Comic"
     }
 
     // MARK: - CORNERS
@@ -25,6 +25,16 @@ struct ViewContants {
         static let down: CACornerMask = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
     }
 
-    struct cornerRadius {}
+    struct cornerRadius {
+        static let twenty: CGFloat = 20
+        static let eight: CGFloat = 8
+        static let four: CGFloat = 4
+    }
+
+    // MARK: - UISCROLLVIEW
+
+    struct scrollViewSpacing {
+        static let topTen: CGFloat = 10
+    }
 
 }

@@ -41,7 +41,7 @@ public struct Utils {
     public static func getApplicationFont(withSize size: CGFloat) -> UIFont {
         var applicationFont = UIFont.systemFont(ofSize: size)
         UIFont.familyNames.forEach { font in
-            if font == ViewContants.fonts.someFont {
+            if font == ViewContants.fonts.heyComic {
                 if let fontName = UIFont.fontNames(forFamilyName: font).first,
                    let font = UIFont.init(name: fontName, size: size) {
                     applicationFont = font
@@ -50,6 +50,28 @@ public struct Utils {
         }
 
         return applicationFont
+    }
+
+}
+
+/// Filter Menu Utils
+extension Utils {
+
+    public static func getStatusOptions() -> [String] {
+        [
+            Constants.StatusFilterType.alive.rawValue,
+            Constants.StatusFilterType.dead.rawValue,
+            Constants.StatusFilterType.unknown.rawValue
+        ]
+    }
+
+    public static func getGenderOptions() -> [String] {
+        [
+            Constants.GenderFilterType.male.rawValue,
+            Constants.GenderFilterType.female.rawValue,
+            Constants.GenderFilterType.genderless.rawValue,
+            Constants.GenderFilterType.unknown.rawValue
+        ]
     }
 
 }

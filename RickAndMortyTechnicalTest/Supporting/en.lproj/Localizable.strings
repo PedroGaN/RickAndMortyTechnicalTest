@@ -1,0 +1,42 @@
+/* 
+  Localizable.strings
+  RickAndMortyTechnicalTest
+
+  Created by Pedro García Navalón on 7/11/23.
+  
+*/
+
+/* Common */
+
+"accept" = "Accept";
+
+/* MainScreen Fetch Menu */
+
+"fetch_menu_characters" = "Characters";
+"fetch_menu_locations" = "Locations";
+"fetch_menu_episodes" = "Episodes";
+
+/* MainScreen Table Menu */
+
+"table_menu_search" = "Search";
+"table_menu_reset" = "Reset";
+"table_menu_apply" = "Apply";
+"table_menu_search_name" = "Name";
+"table_menu_search_status" = "Status";
+"table_menu_search_species" = "Species";
+"table_menu_search_gender" = "Gender";
+
+/* Character Info */
+
+"character_name" = "Name -> %@";
+"character_gender" = "Gender -> %@";
+"character_species" = "Species -> %@";
+"character_status" = "Status -> %@";
+"character_id" = "ID -> %@";
+"character_type" = "Type -> %@";
+"character_origin" = "Origin -> %@";
+"character_actualLocation" = "Actual Location -> %@";
+
+/* Error */
+
+"error_service" = "Service Unavailable, try later";

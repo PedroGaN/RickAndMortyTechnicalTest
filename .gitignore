@@ -1,3 +1,9 @@
+# User settings #
+xcuserdata/
+
+# Obj-C/Swift specific #
+*.hmap
+
 # Compiled source #
 ###################
 *.com
@@ -19,6 +25,9 @@
 *.rar
 *.tar
 *.zip
+*.ipa
+*.dSYM.zip
+*.dSYM
 
 # Logs and databases #
 ######################

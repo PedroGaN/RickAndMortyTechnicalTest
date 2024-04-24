@@ -1,6 +1,0 @@
-framework module Pods_BasicTemplate_BasicTemplateUITests {
-  umbrella header "Pods-BasicTemplate-BasicTemplateUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}
